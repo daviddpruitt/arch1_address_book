@@ -117,22 +117,23 @@ The second milestone of your project is to define several of the
 functions declared and described (but not defined) in address_book.h:
 
 
-1. `size_t strnlen(char *string, size_t); // returns the length of a string`
-2. `int strncmp(char *string1, char* string2); // compares two strings`
+1. `size_t strnlen(char *string, size_t max_length); // returns the length of a string`
+2. `int strncmp(char *string1, char* string2, size_t max_length); // compares two strings`
+3. `void strncpy(char *src, char *dst, max_length); // copys the string source into the destination
 
 ## Dealing with memory allocation
 The third milestone of your project will require you to allocate and free
 memory. You must define and test the following functions declared in `list.h`
 
-3. `BSTNode *new_node(char *name, char* phone); // create a new node `
-4. `BSTNode *free_node(BSTNode *node); // frees the given node`
-5. `BSTNode *find_name(BSTNode *root, char *name); // find a node with the given name`
+4. `BSTNode *new_node(char *name, char* phone); // create a new node `
+5. `BSTNode *free_node(BSTNode *node); // frees the given node`
+6. `BSTNode *find_name(BSTNode *root, char *name); // find a node with the given name`
 
 ## Putting it together
 Now that you have all the pieces for the tokenizer defined, the last part is
 to put them together and define the functions you need to create and traverse
 the tree.
 
-6. `void insert(BSTNode *root, BSTNode *new_node); // insert a node into the tree`
-7. `void delete(BSTNode *root, char *name); // deletes a node with the given name`
-8. `void clear(BSTNode *root); // clears the tree and frees its memory`
+7. `void insert(BSTNode *root, BSTNode *new_node); // insert a node into the tree`
+8. `void delete(BSTNode *root, char *name); // deletes a node with the given name`
+9. `void clear(BSTNode *root); // clears the tree and frees its memory`

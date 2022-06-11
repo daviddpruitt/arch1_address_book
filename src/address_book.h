@@ -13,6 +13,12 @@ size_t strnlen(char *string, size_t max_length);
 */
 int strncmp(char *string1, char* string2, size_t max_length);
 
+/* copys a string from source to the destination, the destination
+   up to max_length characters.
+   the destination must already be allocated
+ */
+viod strncpy(char *src, char *dst, size_t max_length);
+
 /* creates a new node with the specified name and phone # */
 BSTNode *new_node(char *name, char* phone);
 
